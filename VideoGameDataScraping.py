@@ -10,11 +10,11 @@ soup = BeautifulSoup(page.text, 'html.parser')
 
 table = soup.find_all('table')[1]
 
-world_titles = table.find_all('th')
+titles = table.find_all('th')
 
-world_table_titles = [title.text.strip() for title in world_titles]
+tableTitles = [title.text.strip() for title in titles]
 
-dataFrame = pd.DataFrame(columns = world_table_titles)
+dataFrame = pd.DataFrame(columns = tableTitles)
 
 gameTitle = []
 sales = []
